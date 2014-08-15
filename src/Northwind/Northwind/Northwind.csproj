@@ -100,8 +100,13 @@
   <ItemGroup>
     <Content Include="default.htm" />
     <Content Include="Global.asax" />
+    <Content Include="img\bg-footer.png" />
     <Content Include="img\database-18x18.jpg" />
     <Content Include="img\database-icon.jpg" />
+    <Content Include="img\logo-txt-small.png" />
+    <Content Include="img\vcard-ALFKI-200.png" />
+    <Content Include="img\vcard-ALFKI-300.png" />
+    <Content Include="img\vcard-ALFKI.png" />
     <Content Include="sqlite3.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -117,8 +122,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Northwind.sqlite" />
+    <Content Include="Northwind.sqlite" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\WebDeploy.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
