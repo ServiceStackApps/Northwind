@@ -10,7 +10,7 @@ namespace Northwind.ServiceInterface
     {
         private const int PageCount = 20;
 
-        public object Get(Orders request)
+        public OrdersResponse Get(Orders request)
         {
             var orders = request.CustomerId.IsNullOrEmpty()
                 ? Db.Select<Order>(order => order.OrderByDescending(o => o.OrderDate))

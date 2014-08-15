@@ -6,7 +6,7 @@ namespace Northwind.ServiceInterface
 {
     public class CustomersService : ServiceStack.Service
     {
-        public CustomersResponse Get(Customers request)
+        public object Get(Customers request)
         {
             return new CustomersResponse { Customers = Db.Select<Customer>() };
         }

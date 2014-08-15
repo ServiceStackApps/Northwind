@@ -17,7 +17,7 @@ namespace Northwind.ServiceInterface
                     new ArgumentException("Customer does not exist: " + request.Id));
 
             var ordersService = base.ResolveService<OrdersService>();
-            var ordersResponse = (OrdersResponse)ordersService.Get(new Orders { CustomerId = customer.Id });
+            var ordersResponse = ordersService.Get(new Orders { CustomerId = customer.Id });
 
             return new CustomerDetailsResponse
             {
