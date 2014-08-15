@@ -14,7 +14,7 @@ namespace Northwind.ServiceInterface
         {
             var orders = request.CustomerId.IsNullOrEmpty()
                 ? Db.Select<Order>(order => order.OrderByDescending(o => o.OrderDate))
-                      .Skip((request.Page.GetValueOrDefault(1) - 1)*PageCount)
+                      .Skip((request.Page.GetValueOrDefault(1) - 1) * PageCount)
                       .Take(PageCount)
                       .ToList()
                 : Db.Select<Order>(order => order.Where(o => o.CustomerId == request.CustomerId));
@@ -26,7 +26,8 @@ namespace Northwind.ServiceInterface
 
             var orderDetailsLookup = orderDetails.ToLookup(o => o.OrderId);
 
-            var customerOrders = orders.ConvertAll(o => new CustomerOrder {
+            var customerOrders = orders.ConvertAll(o => new CustomerOrder
+            {
                 Order = o,
                 OrderDetails = orderDetailsLookup[o.Id].ToList()
             });

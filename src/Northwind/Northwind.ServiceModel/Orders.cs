@@ -5,25 +5,25 @@ using Northwind.ServiceModel.Types;
 namespace Northwind.ServiceModel
 {
     [Route("/orders")]
-	[Route("/orders/page/{Page}")]
-	[Route("/customers/{CustomerId}/orders")]
-	public class Orders
-	{
-		public int? Page { get; set; }
+    [Route("/orders/page/{Page}")]
+    [Route("/customers/{CustomerId}/orders")]
+    public class Orders
+    {
+        public int? Page { get; set; }
 
-		public string CustomerId { get; set; }
-	}
+        public string CustomerId { get; set; }
+    }
 
-	public class OrdersResponse : IHasResponseStatus
-	{
-		public OrdersResponse()
-		{
-			this.ResponseStatus = new ResponseStatus();
-			this.Results = new List<CustomerOrder>();
-		}
+    public class OrdersResponse : IHasResponseStatus
+    {
+        public OrdersResponse()
+        {
+            this.ResponseStatus = new ResponseStatus();
+            this.Results = new List<CustomerOrder>();
+        }
 
-		public List<CustomerOrder> Results { get; set; }
+        public List<CustomerOrder> Results { get; set; }
 
-		public ResponseStatus ResponseStatus { get; set; }
-	}
+        public ResponseStatus ResponseStatus { get; set; }
+    }
 }
