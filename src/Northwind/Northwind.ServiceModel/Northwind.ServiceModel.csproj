@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoQuery.cs" />
     <Compile Include="CachedOperations.cs" />
     <Compile Include="Orders.cs" />
     <Compile Include="CustomerDetails.cs" />

@@ -22,6 +22,8 @@ namespace Northwind
             //container.Register<ICacheClient>(new PooledRedisClientManager());
 
             VCardFormat.Register(this);
+
+            Plugins.Add(new AutoQueryFeature { MaxLimit = 100 });
         }
     }
 
