@@ -122,6 +122,10 @@
         color: #444;
         font-size: 11px;
     }
+    .subautoquery TH {
+        font-size: 12px;
+        padding-left: 15px;
+    }
 
 </style>
 </head>
@@ -186,30 +190,42 @@
             <td class="c4">OrdersService.cs</td>
         </tr>
         <tr>
-            <td colspan="4" style="font-weight:bold;text-align:center;"><a href="https://github.com/ServiceStack/ServiceStack/wiki/Auto-Query">Auto Query</a></td>
+            <td colspan="4" style="font-weight:bold;text-align:center; padding: 10px; font-size: 16px;"><a href="https://github.com/ServiceStack/ServiceStack/wiki/Auto-Query">Auto Query</a></td>
         </tr>
         <tr>
             <th>Customers</th>
-            <th><a href="/query/customers">query/customers</a></th>
+            <th><a href="/query/customers">/query/customers</a></th>
             <td class="c3"><a href="/query/customers.json">json</a><a href="/query/customers.xml">xml</a><a href="/query/customers.html">html</a><a href="/query/customers.csv">csv</a><a href="/query/customers.jsv">jsv</a></td>
             <td class="c4"><b><a href="https://github.com/ServiceStackApps/Northwind/blob/master/src/Northwind/Northwind.ServiceModel/AutoQuery.cs">AutoQuery.cs</a></b></td>
         </tr>
-        <tr>
+        <tr class="subautoquery">
             <th>Countries Starting With 'U'</th>
-            <th><a href="/query/customers?CountryStartsWith=U">?CountryStartsWith=U</a></th>
+            <th><a href="/query/customers?CountryStartsWith=U">CountryStartsWith=U</a></th>
             <td class="c3"><a href="/query/customers.json?CountryStartsWith=U">json</a><a href="/query/customers.xml?CountryStartsWith=U">xml</a><a href="/query/customers.html?CountryStartsWith=U">html</a><a href="/query/customers.csv?CountryStartsWith=U">csv</a><a href="/query/customers.jsv?CountryStartsWith=U">jsv</a></td>
+            <td class="c4">AutoQuery.cs</td>
+        </tr>
+        <tr class="subautoquery">
+            <th>Customers IN (CHOPS,FRANK)</th>
+            <th><a href="/query/customers?Ids=CHOPS,FRANK">Ids=CHOPS,FRANK</a></th>
+            <td class="c3"><a href="/query/customers.json?Ids=CHOPS,FRANK">json</a><a href="/query/customers.xml?Ids=CHOPS,FRANK">xml</a><a href="/query/customers.html?Ids=CHOPS,FRANK">html</a><a href="/query/customers.csv?Ids=CHOPS,FRANK">csv</a><a href="/query/customers.jsv?Ids=CHOPS,FRANK">jsv</a></td>
             <td class="c4">AutoQuery.cs</td>
         </tr>
         <tr>
             <th>Orders</th>
-            <th><a href="/query/orders">query/orders</a></th>
+            <th><a href="/query/orders">/query/orders</a></th>
             <td class="c3"><a href="/query/orders.json">json</a><a href="/query/orders.xml">xml</a><a href="/query/orders.html">html</a><a href="/query/orders.csv">csv</a><a href="/query/orders.jsv">jsv</a></td>
             <td class="c4">AutoQuery.cs</td>
         </tr>
-        <tr>
-            <th>Orders in Descending Order</th>
-            <th><a href="/query/orders?OrderByDesc=Id">?OrderByDesc=Id</a></th>
-            <td class="c3"><a href="/query/orders.json?OrderByDesc=Id">json</a><a href="/query/orders.xml?OrderByDesc=Id">xml</a><a href="/query/orders.html?OrderByDesc=Id">html</a><a href="/query/orders.csv?OrderByDesc=Id">csv</a><a href="/query/orders.jsv?OrderByDesc=Id">jsv</a></td>
+        <tr class="subautoquery">
+            <th>Freight more than $300</th>
+            <th><a href="/query/orders?Freight>=300">Freight>=300</a></th>
+            <td class="c3"><a href="/query/orders.json?Freight>=300">json</a><a href="/query/orders.xml?Freight>=300">xml</a><a href="/query/orders.html?Freight>=300">html</a><a href="/query/orders.csv?Freight>=300">csv</a><a href="/query/orders.jsv?Freight>=300">jsv</a></td>
+            <td class="c4">AutoQuery.cs</td>
+        </tr>
+        <tr class="subautoquery">
+            <th>Orders by Customer, Id Desc</th>
+            <th><a href="/query/orders?OrderBy=CustomerId,-Id">OrderBy=CustomerId,-Id</a></th>
+            <td class="c3"><a href="/query/orders.json?OrderBy=CustomerId,-Id">json</a><a href="/query/orders.xml?OrderBy=CustomerId,-Id">xml</a><a href="/query/orders.html?OrderBy=CustomerId,-Id">html</a><a href="/query/orders.csv?OrderBy=CustomerId,-Id">csv</a><a href="/query/orders.jsv?OrderBy=CustomerId,-Id">jsv</a></td>
             <td class="c4">AutoQuery.cs</td>
         </tr>
         </tbody>
