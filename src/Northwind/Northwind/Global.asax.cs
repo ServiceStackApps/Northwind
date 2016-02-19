@@ -4,6 +4,7 @@ using System.Web;
 using Funq;
 using ServiceStack;
 using Northwind.ServiceInterface;
+using ServiceStack.Admin;
 using ServiceStack.OrmLite;
 using ServiceStack.Data;
 
@@ -24,6 +25,7 @@ namespace Northwind
             VCardFormat.Register(this);
 
             Plugins.Add(new AutoQueryFeature { MaxLimit = 100 });
+            Plugins.Add(new AdminFeature());
         }
     }
 
