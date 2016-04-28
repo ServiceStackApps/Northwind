@@ -13,11 +13,11 @@ namespace Northwind.ServiceInterface
         public OrdersResponse Get(Orders request)
         {
             var orders = request.CustomerId.IsNullOrEmpty()
-                ? Db.Select<Order>(order => order.OrderByDescending(o => o.OrderDate))
+                ? Db.Select(Db.From<Order>().OrderByDescending(o => o.OrderDate))
                       .Skip((request.Page.GetValueOrDefault(1) - 1) * PageCount)
                       .Take(PageCount)
                       .ToList()
-                : Db.Select<Order>(order => order.Where(o => o.CustomerId == request.CustomerId));
+                : Db.Select<Order>(x => x.CustomerId == request.CustomerId);
 
             if (orders.Count == 0)
                 return new OrdersResponse();

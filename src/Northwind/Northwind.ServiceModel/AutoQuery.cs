@@ -4,8 +4,8 @@ using ServiceStack;
 namespace Northwind.ServiceModel
 {
     [Route("/query/customers")]
-    public class QueryCustomers : QueryBase<Customer> { }
+    public class QueryCustomers : QueryDb<Customer> { }
 
     [Route("/query/orders")]
-    public class QueryOrders : QueryBase<Order> { }
+    public class QueryOrders : QueryDb<Order> { }
 }
