@@ -16,15 +16,12 @@ namespace Northwind.ServiceInterface
                 throw new HttpError(HttpStatusCode.NotFound,
                     new ArgumentException("Customer does not exist: " + request.Id));
 
-            using (var ordersService = base.ResolveService<OrdersService>())
+            var ordersResponse = base.Gateway.Send(new Orders { CustomerId = customer.Id });
+            return new CustomerDetailsResponse
             {
-                var ordersResponse = ordersService.Get(new Orders { CustomerId = customer.Id });
-                return new CustomerDetailsResponse
-                {
-                    Customer = customer,
-                    CustomerOrders = ordersResponse.Results,
-                };
-            }
+                Customer = customer,
+                CustomerOrders = ordersResponse.Results,
+            };
         }
     }
 }
