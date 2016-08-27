@@ -126,6 +126,19 @@
         font-size: 12px;
         padding-left: 15px;
     }
+    .aqviewer {
+        text-align: center; 
+        padding: 10px; 
+        font-size: 20px;
+    }
+    .aqviewer a {
+        color: #0a3;
+        text-decoration: none;
+    }
+    .aqviewer a:hover {
+        text-decoration: underline;
+    }
+
 
 </style>
 </head>
@@ -190,7 +203,7 @@
             <td class="c4">OrdersService.cs</td>
         </tr>
         <tr>
-            <td colspan="4" style="font-weight:bold;text-align:center; padding: 10px; font-size: 16px;"><a href="https://github.com/ServiceStack/ServiceStack/wiki/Auto-Query">Auto Query</a></td>
+            <td colspan="4" class="aqviewer">Northwind <a href="https://github.com/ServiceStack/ServiceStack/wiki/Auto-Query">AutoQuery</a> Services</td>
         </tr>
         <tr>
             <th>Customers</th>
@@ -229,15 +242,19 @@
             <td class="c4">AutoQuery.cs</td>
         </tr>
         </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="4" class="aqviewer">
+                <a href="/ss_admin/autoquery/">AutoQuery UI for Northwind Services</a>
+            </td>
+        </tr>
+        </tfoot>
     </table>
 
     <p>
         The entire datasource for the Northwind project is contained in this <a href="Northwind.sqlite"><img src="img/database-18x18.jpg" align="absmiddle" hspace="3" />Northwind.sqlite</a> database
         created by this <a href="https://github.com/ServiceStackV3/ServiceStack.Benchmarks/blob/master/tests/ServiceStack.Northwind.Tests/PopulateDataTests.cs">unit test</a>.
     </p>
-
-
-
 
     <a href="vcard-format.htm"><img src="img/vcard-ALFKI-200.png" alt="VCard Custom MediaType" style="float:right;" /></a>
     <h3>Adding Custom Media Types - The VCard format</h3>

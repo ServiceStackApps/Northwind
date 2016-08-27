@@ -7,7 +7,7 @@ namespace Northwind.ServiceModel
     [Route("/orders")]
     [Route("/orders/page/{Page}")]
     [Route("/customers/{CustomerId}/orders")]
-    public class Orders
+    public class Orders : IReturn<OrdersResponse>
     {
         public int? Page { get; set; }
 
