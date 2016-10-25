@@ -6,6 +6,7 @@
 
 #### Features
 
+ - [AutoQuery](http://docs.servicestack.net/autoquery-rdbms.html)
  - [OrmLite Sqlite](https://github.com/ServiceStack.OrmLite)
  - [Multiple automatic built-in Content-Types](http://northwind.servicestack.net/default.htm)
  - [Custom Media Types - Adding vcard format](http://northwind.servicestack.net/vcard-format.htm)
@@ -13,4 +14,4 @@
 
 Try it out live at: [northwind.servicestack.net](http://northwind.servicestack.net)
 
-Follow [@ServiceStack](http://twitter.com) or [+ServiceStack](https://plus.google.com/u/0/communities/112445368900682590445) for updates.
+Follow [@ServiceStack](http://twitter.com/ServiceStack) or [+ServiceStack](https://plus.google.com/u/0/communities/112445368900682590445) for updates.
